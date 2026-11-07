@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clipboard Viewer</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-left">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 2h6a1 1 0 011 1v1H8V3a1 1 0 011-1z"/>
+            <path d="M8 3H5a2 2 0 00-2 2v15a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2h-3"/>
+            <path d="M9 14h6M9 10h6M9 18h4"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Clipboard Viewer</h1>
+        </div>
+      </div>
+      <div class="header-right">
+        <button class="theme-toggle" id="theme-toggle" title="切换主题">
+          <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <label class="auto-refresh">
+          <input type="checkbox" id="auto-refresh" checked />
+          <span>自动刷新</span>
+        </label>
+        <button class="refresh-btn" id="refresh-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3.5 7.5A9 9 0 0112 3a9 9 0 018.5 6" />
+            <path d="M20.5 16.5A9 9 0 0112 21a9 9 0 01-8.5-6" />
+            <path d="M17 2l3.5 7-6.5-1" />
+            <path d="M7 22l-3.5-7 6.5 1" />
+          </svg>
+          刷新
+        </button>
+      </div>
+    </header>
+    <div id="stats" class="stats"></div>
+    <div id="content"></div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
